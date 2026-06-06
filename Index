@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Ananda Putri ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+overflow:hidden;
+background:linear-gradient(135deg,#ff9ecf,#ffe4ec);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.card{
+width:90%;
+max-width:430px;
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+position:relative;
+z-index:2;
+}
+
+h1{
+color:#ff2d75;
+margin-bottom:10px;
+}
+
+p{
+font-size:18px;
+line-height:1.6;
+margin-top:10px;
+}
+
+.scene{
+height:140px;
+position:relative;
+margin-bottom:20px;
+}
+
+.boy{
+position:absolute;
+left:-80px;
+bottom:0;
+font-size:75px;
+animation:jalan 5s forwards;
+}
+
+.girl{
+position:absolute;
+right:20px;
+bottom:0;
+font-size:75px;
+}
+
+@keyframes jalan{
+0%{left:-80px;}
+100%{left:42%;}
+}
+
+button{
+padding:12px 22px;
+border:none;
+border-radius:30px;
+font-size:17px;
+cursor:pointer;
+margin:10px;
+transition:.3s;
+}
+
+#yes{
+background:#ff2d75;
+color:white;
+}
+
+#no{
+background:#ddd;
+position:absolute;
+}
+
+.heart{
+position:absolute;
+color:red;
+animation:love 6s linear infinite;
+opacity:.8;
+}
+
+@keyframes love{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+<body>
+
+<div class="card" id="card">
+
+<div class="scene">
+<div class="boy" id="boy">👦</div>
+<div class="girl" id="girl">👧</div>
+</div>
+
+<h1>💖 Maafkan Bayu ya, Ananda Putri 💖</h1>
+
+<p>
+
+Mas benar-benar minta maaf kalau sudah membuat adek sedih.
+
+<br><br>
+
+Mas sadar mungkin ada kata-kata atau sikap yang membuat hati adek terluka.
+
+<br><br>
+
+🥺 Tapi satu hal yang ingin mas bilang...
+
+<br><br>
+
+❤️ <b>Mas sayang sama adekk.</b>
+
+</p>
+
+<div style="margin-top:20px;position:relative;height:70px">
+
+<button id="yes" onclick="maaf()">Aku Maafkan ❤️</button>
+
+<button id="no">Masih Ngambek 😤</button>
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<40;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(15+Math.random()*25)+"px";
+
+h.style.animationDelay=Math.random()*6+"s";
+
+document.body.appendChild(h);
+
+}
+
+const no=document.getElementById("no");
+
+no.addEventListener("mouseover",()=>{
+
+no.style.left=Math.random()*220+"px";
+
+no.style.top=Math.random()*40+"px";
+
+});
+
+function maaf(){
+
+document.getElementById("boy").innerHTML="🫂";
+
+document.getElementById("boy").style.left="42%";
+
+document.getElementById("girl").style.display="none";
+
+document.getElementById("card").innerHTML=`
+
+<div style="font-size:90px">🫂</div>
+
+<h1>Terima Kasih Sayang ❤️</h1>
+
+<p>
+
+Yeayyy... akhirnya adek memaafkan mas.
+
+<br><br>
+
+Mas janji akan menjaga hati adek.
+
+<br><br>
+
+❤️ Mas sayang sama adekk selamanya ❤️
+
+</p>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
